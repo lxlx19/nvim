@@ -1,14 +1,21 @@
--- disable netrw at the very start of your init.lua (strongly advised)
+-----------------------------------------------------------
+-- NVIM TREE CONFIGURATION --------------------------------
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+-- GENERAL ------------------------------------------------
+-----------------------------------------------------------
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
+-----------------------------------------------------------
+-- SET TERM TO 24-BIT COLOR -------------------------------
+-----------------------------------------------------------
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- OR setup with some options
+-----------------------------------------------------------
+-- SETUP NVIM TREE ----------------------------------------
+-----------------------------------------------------------
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
@@ -22,6 +29,8 @@ require("nvim-tree").setup({
   },
 })
 
--- Mappings
+-----------------------------------------------------------
+-- Mappings -----------------------------------------------
+-----------------------------------------------------------
 vim.api.nvim_set_keymap("n", "<C-\\>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", { noremap = true, silent = true })

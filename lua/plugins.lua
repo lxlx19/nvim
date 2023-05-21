@@ -1,40 +1,48 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+--------------------------------------------------------------
+-- Packer and Plugins ----------------------------------------
+--------------------------------------------------------------
 
--- Only required if you have packer configured as `opt`
--- vim.cmd [[packadd packer.nvim]]
-
+--------------------------------------------------------------
+-- Packer ----------------------------------------------------
+--------------------------------------------------------------
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Mason e Requires
+--------------------------------------------------------------
+-- Plugins ---------------------------------------------------
+--------------------------------------------------------------
+
+--- MASON ----------------------------------------------------
   use {
       'williamboman/mason.nvim',
   }
     
-  -- DAP
+--- DAP ------------------------------------------------------
   use 'mfussenegger/nvim-dap'
 
-  -- LSP
+--- LSP ------------------------------------------------------
   use 'neovim/nvim-lspconfig'
 
-  -- Github Copilot
+--- Github Copilot -------------------------------------------
   use 'github/copilot.vim'
 
-  -- Completetion
+--- Completetion ---------------------------------------------
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
 
-  -- Git-Gutter
+--- Git-Gutter -----------------------------------------------
   use 'airblade/vim-gitgutter'
 
-  -- Nvim-Visual-Multi
+--- Nvim-Visual-Multi ----------------------------------------
   use 'mg979/vim-visual-multi'
 
-  -- Telescope with FZF
+--- Notify ---------------------------------------------------  
+  use 'rcarriga/nvim-notify'
+
+--- Telescope with FZF ---------------------------------------
   use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} }
@@ -42,29 +50,28 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope-fzf-native.nvim'
   use 'junegunn/fzf.vim'
 
-
-  -- Plugin de barra de status
+--- Feline ---------------------------------------------------
   use 'famiu/feline.nvim'
     
-  -- Plugin para ícones na barra de status
+--- Devicons -------------------------------------------------
   use 'kyazdani42/nvim-web-devicons'
 
-  -- Treesitter
+--- Treesitter -----------------------------------------------
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
   }
 
-  -- Nvim-tree.lua
+--- Nvim-tree.lua --------------------------------------------
   use {
       'nvim-tree/nvim-tree.lua',
       requires = 'nvim-tree/nvim-web-devicons',
   }
 
-  -- Toggle Terminal
+--- Toggle Terminal ------------------------------------------
   use 'akinsho/nvim-toggleterm.lua'
   
-  -- Alpha-nvim
+--- Alpha-nvim -----------------------------------------------
   use {
     'goolord/alpha-nvim',
     requires = { 'nvim-tree/nvim-web-devicons' },
@@ -72,22 +79,37 @@ return require('packer').startup(function(use)
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
 }
-  -- Barbar
+
+--- Barbar ---------------------------------------------------
   use 'lewis6991/gitsigns.nvim'
   use 'romgrk/barbar.nvim'
 
-  -- Vim wiki
+--- Vim wiki -------------------------------------------------
   use 'vimwiki/vimwiki'
 
-  -- Themes
+--------------------------------------------------------------
+-- Themes ----------------------------------------------------
+--------------------------------------------------------------
+
+--- Dracula --------------------------------------------------
   use {'dracula/vim', as = 'dracula'}
+
+--- Cobalt2 --------------------------------------------------
   use {
     'lalitmee/cobalt2.nvim',
     requires = 'tjdevries/colorbuddy.nvim'
 }
+
+--- Gruvbox --------------------------------------------------
   use 'sainnhe/gruvbox-material'
+
+--- Edge -----------------------------------------------------
   use 'sainnhe/edge'
+
+--- One Dark -------------------------------------------------
   use 'joshdick/onedark.vim'
+
+--- Zephur ---------------------------------------------------
   use({
   'glepnir/zephyr-nvim',
     requires = { 'nvim-treesitter/nvim-treesitter', opt = true },

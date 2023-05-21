@@ -1,10 +1,6 @@
 -------------------------------------------------------
 -- CONFIG BARRA STATUS --------------------------------
 -------------------------------------------------------
-
--- statusline.lua
-
----depends om https://github.com/feline-nvim/feline.nvim
 local line_ok, feline = pcall(require, "feline")
 if not line_ok then
 	return
@@ -238,3 +234,4 @@ feline.setup({
 	theme = one_monokai,
 	vi_mode_colors = vi_mode_colors,
 })
+
