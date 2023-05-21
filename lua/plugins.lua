@@ -73,6 +73,8 @@ return require('packer').startup(function(use)
     end
 }
 
+  -- Vim wiki
+  use 'vimwiki/vimwiki'
 
   -- Themes
   use {'dracula/vim', as = 'dracula'}
@@ -80,7 +82,9 @@ return require('packer').startup(function(use)
     'lalitmee/cobalt2.nvim',
     requires = 'tjdevries/colorbuddy.nvim'
 }
-
+  use 'sainnhe/gruvbox-material'
+  use 'sainnhe/edge'
+  use 'joshdick/onedark.vim'
   use({
   'glepnir/zephyr-nvim',
     requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
