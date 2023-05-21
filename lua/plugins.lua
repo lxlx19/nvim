@@ -34,6 +34,15 @@ return require('packer').startup(function(use)
   -- Nvim-Visual-Multi
   use 'mg979/vim-visual-multi'
 
+  -- Telescope with FZF
+  use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'} }
+  }
+  use 'nvim-telescope/telescope-fzf-native.nvim'
+  use 'junegunn/fzf.vim'
+
+
   -- Plugin de barra de status
   use 'famiu/feline.nvim'
     
