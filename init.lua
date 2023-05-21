@@ -77,7 +77,7 @@ require('themes')
 require('settings.statusline')
 
 -- Configuração Nerdtree
-require('settings.nerdtree')
+require('settings.tree')
 
 -- Configuração do Mason
 require("mason").setup({

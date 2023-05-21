@@ -55,11 +55,11 @@ return require('packer').startup(function(use)
       run = ':TSUpdate',
   }
 
-  -- NerdTree
-  use 'preservim/nerdtree'
-  use 'ryanoasis/vim-devicons'
-  use 'tiagofumo/vim-nerdtree-syntax-highlight'
-  use 'Xuyuanp/nerdtree-git-plugin'
+  -- Nvim-tree.lua
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = 'nvim-tree/nvim-web-devicons',
+  }
 
   -- Toggle Terminal
   use 'akinsho/nvim-toggleterm.lua'
@@ -72,6 +72,9 @@ return require('packer').startup(function(use)
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
 }
+  -- Barbar
+  use 'lewis6991/gitsigns.nvim'
+  use 'romgrk/barbar.nvim'
 
   -- Vim wiki
   use 'vimwiki/vimwiki'
