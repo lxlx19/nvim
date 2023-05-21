@@ -8,6 +8,8 @@ vim.cmd('filetype plugin indent on')
 -- Configuração do Packer
 vim.cmd([[packadd packer.nvim]])
 
+
+
 -- Configurações de plugins usando o gerenciador de plugins Packer
 require('plugins')
 

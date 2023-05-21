@@ -21,6 +21,19 @@ return require('packer').startup(function(use)
   -- Github Copilot
   use 'github/copilot.vim'
 
+  -- Completetion
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  -- Git-Gutter
+  use 'airblade/vim-gitgutter'
+
+  -- Nvim-Visual-Multi
+  use 'mg979/vim-visual-multi'
+
   -- Plugin de barra de status
   use 'famiu/feline.nvim'
     
@@ -41,6 +54,15 @@ return require('packer').startup(function(use)
 
   -- Toggle Terminal
   use 'akinsho/nvim-toggleterm.lua'
+  
+  -- Alpha-nvim
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
 
 
   -- Themes
