@@ -1,7 +1,7 @@
 -- keybindings.lua
 --
---Definir tecla leader
-vim.g.mapleader = '<space>'
+--Definir tecla leader como espaço
+vim.g.mapleader = ' '
 
 -- Mapeamento para copiar e colar no modo normal
 vim.api.nvim_set_keymap('n', '<leader>c', '"+y', { noremap = true })

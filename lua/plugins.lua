@@ -7,6 +7,11 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Mason e Requires
+  use {
+      'williamboman/mason.nvim',
+  }
+
   -- Plugin de barra de status
   use 'famiu/feline.nvim'
     
