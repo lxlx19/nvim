@@ -87,6 +87,9 @@ return require('packer').startup(function(use)
 --- Vim wiki -------------------------------------------------
   use 'vimwiki/vimwiki'
 
+--- Transparent ----------------------------------------------
+  use 'xiyaowong/nvim-transparent'
+
 --------------------------------------------------------------
 -- Themes ----------------------------------------------------
 --------------------------------------------------------------
@@ -114,5 +117,8 @@ return require('packer').startup(function(use)
   'glepnir/zephyr-nvim',
     requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
   })
+
+--- Vim-Nightfly-Color ---------------------------------------
+  use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 
 end)

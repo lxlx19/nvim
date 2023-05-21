@@ -52,7 +52,7 @@ vim.o.wrap = false
 -- Configurações de plugins -----------------------------
 ---------------------------------------------------------
 
--- Configuração do Mason
+-- Configuração do Mason --------------------------------
 require("mason").setup({
     ui = {
         icons = {
@@ -63,7 +63,7 @@ require("mason").setup({
     }
 })
 
--- Configuração do Treesitter
+-- Configuração do Treesitter ---------------------------
 require('nvim-treesitter.configs').setup {
     ensure_installed = {"lua", "vim", "query", "python", "json"},
     sync_install = false,
@@ -83,20 +83,20 @@ require('nvim-treesitter.configs').setup {
     },
 }
 
--- Toggle Terminal
+-- Toggle Terminal --------------------------------------
 require('toggleterm').setup{
   open_mapping = [[<F7>]],  -- Define o atalho para abrir o terminal usando F7
   hide_numbers = true,  -- Oculta os números das janelas do terminal
   shade_terminals = false,  -- Desativa o sombreamento da área ao redor do terminal
 }
 
--- Configuração LSPconfig
+-- Configuração LSPconfig -------------------------------
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig').pyright.setup{
     capabilities = capabilities,
 }
 
--- Configuração do Notify
+-- Configuração do Notify -------------------------------
 vim.notify = require('notify')
 require('notify').setup({
     stages = "fade_in_slide_out",
@@ -109,4 +109,18 @@ require('notify').setup({
         DEBUG = "",
         TRACE = "✎",
     },
+})
+
+-- Configuração do Transparent --------------------------
+require("transparent").setup({
+  groups = { -- table: default groups
+    'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+    'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+    'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+    'SignColumn', 'CursorLineNr', 'EndOfBuffer',
+  },
+  extra_groups = {
+    'NvimTreeNormal', 'NvimTreeEndOfBuffer', 'NvimTreeVertSplit',
+  },
+  exclude_groups = {}, 
 })
