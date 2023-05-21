@@ -11,6 +11,15 @@ return require('packer').startup(function(use)
   use {
       'williamboman/mason.nvim',
   }
+    
+  -- DAP
+  use 'mfussenegger/nvim-dap'
+
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
+  -- Github Copilot
+  use 'github/copilot.vim'
 
   -- Plugin de barra de status
   use 'famiu/feline.nvim'

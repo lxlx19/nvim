@@ -1,4 +1,4 @@
--- Configurações gerais
+-- Configuraçõe gerais
 -- Habilita a sintaxe realçada
 vim.cmd('syntax enable')
 -- Habilita o reconhecimento automático do tipo de arquivo e as configurações de indentação
@@ -77,6 +77,16 @@ require('settings.statusline')
 -- Configuração Nerdtree
 require('settings.nerdtree')
 
+-- Configuração do Mason
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
 
 -- Configuração do Treesitter
 require('nvim-treesitter.configs').setup {
@@ -104,3 +114,8 @@ require('toggleterm').setup{
   hide_numbers = true,  -- Oculta os números das janelas do terminal
   shade_terminals = false,  -- Desativa o sombreamento da área ao redor do terminal
 }
+
+-- Configuração LSPconfig
+require('lspconfig').pyright.setup{}
+
+
