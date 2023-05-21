@@ -76,6 +76,10 @@ return require('packer').startup(function(use)
 
   -- Themes
   use {'dracula/vim', as = 'dracula'}
+  use {
+    'lalitmee/cobalt2.nvim',
+    requires = 'tjdevries/colorbuddy.nvim'
+}
 
   use({
   'glepnir/zephyr-nvim',

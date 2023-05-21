@@ -21,7 +21,7 @@ vim.api.nvim_set_keymap('n', '<C-q>', ':q<CR>', { noremap = true } )
 vim.api.nvim_set_keymap('n', '<leader>i', 'i', { noremap = true })
 
 -- Atalho para alternar para o modo de comando
-vim.api.nvim_set_keymap('n', '<leader>', ':', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader><leader>', ':', { noremap = true })
 
 -- Atalho para fechar todas as janelas, exceto a atual
 vim.api.nvim_set_keymap('n', '<leader>q', ':only<CR>', { noremap = true })
@@ -48,3 +48,10 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- telescope themes
+vim.keymap.set('n', '<leader>ft', function()
+  builtin.colorscheme({
+    enable_preview = true,
+    theme_dropdown = true,
+  })
+end, {})

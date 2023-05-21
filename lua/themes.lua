@@ -3,4 +3,6 @@
 -- ---------------------------------------------------
 
 -- Set Theme
-vim.cmd('colorscheme zephyr')
+--vim.cmd('colorscheme zephyr')
+
+require('colorbuddy').colorscheme('cobalt2')
