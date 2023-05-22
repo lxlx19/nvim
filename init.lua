@@ -11,6 +11,8 @@ require('keymap')
 require('themes')
 require('settings.statusline')
 require('settings.tree')
+require('settings.start')
+require('settings.ale')
 
 ---------------------------------------------------------
 -- Configuração do Packer -------------------------------
@@ -124,3 +126,9 @@ require("transparent").setup({
   },
   exclude_groups = {}, 
 })
+
+-----------------------------------------------------------
+-- WhichKey -----------------------------------------------
+-----------------------------------------------------------
+require("which-key").register(mappings, opts)
+

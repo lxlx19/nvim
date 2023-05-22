@@ -72,13 +72,16 @@ return require('packer').startup(function(use)
   use 'akinsho/nvim-toggleterm.lua'
   
 --- Alpha-nvim -----------------------------------------------
-  use {
-    'goolord/alpha-nvim',
-    requires = { 'nvim-tree/nvim-web-devicons' },
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.startify'.config)
-    end
-}
+--  use {
+--    'goolord/alpha-nvim',
+--    requires = { 'nvim-tree/nvim-web-devicons' },
+--    config = function ()
+--        require'alpha'.setup(require'alpha.themes.startify'.config)
+--    end
+--}
+
+--- Startify -------------------------------------------------
+  use 'mhinz/vim-startify'
 
 --- Barbar ---------------------------------------------------
   use 'lewis6991/gitsigns.nvim'
@@ -89,6 +92,41 @@ return require('packer').startup(function(use)
 
 --- Transparent ----------------------------------------------
   use 'xiyaowong/nvim-transparent'
+
+--- Which Key ------------------------------------------------
+  use {
+      'folke/which-key.nvim',
+      config = function()
+          vim.o.timeout = true
+          vim.o.timeoutlen = 300
+          require("which-key").setup {
+
+          }
+      end
+  }
+
+--- Jedi -----------------------------------------------------
+  use 'davidhalter/jedi-vim'
+
+--- ALE ------------------------------------------------------
+  use 'dense-analysis/ale'
+
+
+--- Nvim-Autopairs -------------------------------------------
+  use {
+      'windwp/nvim-autopairs',
+      config = function()
+          require('nvim-autopairs').setup{}
+      end
+    }
+
+--- Comment.nvim ------------------------------------------
+    use {
+        'terrortylor/nvim-comment',
+        config = function()
+            require('nvim_comment').setup()
+        end
+    }
 
 --------------------------------------------------------------
 -- Themes ----------------------------------------------------
@@ -121,4 +159,8 @@ return require('packer').startup(function(use)
 --- Vim-Nightfly-Color ---------------------------------------
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
 
+--- tokyonight.nvim ------------------------------------------
+  use 'folke/tokyonight.nvim'
+
 end)
+
