@@ -1,10 +1,15 @@
 -------------------------------------------------------
+-- FELINE CONFIG --------------------------------------
+-------------------------------------------------------
+-------------------------------------------------------
 -- CONFIG BARRA STATUS --------------------------------
 -------------------------------------------------------
 local line_ok, feline = pcall(require, "feline")
 if not line_ok then
 	return
 end
+
+vim.o.termguicolors = true
 
 local one_monokai = {
 	fg = "#abb2bf",
@@ -234,4 +239,5 @@ feline.setup({
 	theme = one_monokai,
 	vi_mode_colors = vi_mode_colors,
 })
+
 

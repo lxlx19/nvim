@@ -1,5 +1,5 @@
 --------------------------------------------------------------
--- Packer and Plugins ----------------------------------------
+-- PACKER IMPORT ---------------------------------------------
 --------------------------------------------------------------
 
 --------------------------------------------------------------
@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
   use 'junegunn/fzf.vim'
 
 --- Feline ---------------------------------------------------
-  use 'famiu/feline.nvim'
+  use 'freddiehaddad/feline.nvim'
     
 --- Devicons -------------------------------------------------
   use 'kyazdani42/nvim-web-devicons'
@@ -163,4 +163,5 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
 
 end)
+
 
