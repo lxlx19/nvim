@@ -3,29 +3,37 @@
 ---------------------------------------------------------
 local ts = require('nvim-treesitter.configs')
 
--- Python -----------------------------------------------
+-- Setup ------------------------------------------------
 ts.setup {
-    ensure_installed = 'python',
     highlight = {
         enable = true,
-        use_languagetree = true
+        disable = {},
     },
-}
-
--- Lua --------------------------------------------------
-ts.setup {
-    ensure_installed = 'lua',
-    highlight = {
+    indent = {
         enable = true,
-        use_languagetree = true
+        disable = {},
     },
-}
-
--- Json -------------------------------------------------
-ts.setup {
-    ensure_installed = 'json',
-    highlight = {
+    ensure_installed = {
+        'markdown',
+        'markdown_inline',
+        'dockerfile',
+        'html',
+        'javascript',
+        'json',
+        'lua',
+        'python',
+        'regex',
+        'rust',
+        'toml',
+        'tsx',
+        'typescript',
+        'yaml',
+    },
+    autotag = {
         enable = true,
-        use_languagetree = true
+    },
+    context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
     },
 }
