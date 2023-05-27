@@ -2,10 +2,10 @@
 
 ## Installation 
 
-### Install Neovim in Manjaro (my personal distro)
+### Install Neovim in Manjaro (my favorite distro)
 > Unix
 ```shell
-sudo pacman -S neovim 
+sudo pacman -Sy neovim 
 ```
 
 ### Install Packer
