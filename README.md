@@ -3,33 +3,39 @@
 ## Installation 
 
 ### Install Neovim in Manjaro (my personal distro)
-'''bash
+
+```shell
 sudo pacman -S neovim 
 '''
 
 ### Install Packer
-'''bash
+
+```shell
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-'''
+```
 
 ### Install Configuration 
-'''bash 
+
+```shell
 https://github.com/lxlx19/nvim.git ~/.config/nvim 
-''''
+```
 
 ### Remove the git file
-'''bash 
+
+```shell
 rm -rf ~/config/nvim/.git
-'''
+```
 
 ### Start Neovim and Install Plugins
-'''bash
+
+```shell
 nvim 
 :PackerSync
-'''
+```
 
 ### Check the installation 
-'''bash 
+
+```shell
 :checkhealth
-'''
+```
