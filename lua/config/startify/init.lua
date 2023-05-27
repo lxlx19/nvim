@@ -5,16 +5,16 @@
 -- Instalação do nvim-web-devicons
 vim.cmd [[packadd nvim-web-devicons]]
 
-vim.g.startify_enable_special = 0 
+vim.g.startify_enable_special = 0
  vim.g.startify_files_number = 6
- vim.g.startify_change_to_dir = 1 
+ vim.g.startify_change_to_dir = 1
  -- forçar que os atalhos sejam letras e não numeros
- vim.g.startify_custom_indices = { 
-     'a', 'b', 'c', 'd', 'e', 'f', 
-     'g', 'h', 'i' , 'j', 'k', 'l', 
-     'm', 'n', 'o', 'p', 'q', 'r' , 
-     's', 't', 'u', 'v', 'w', 'x', 
-     'y', 'z' 
+ vim.g.startify_custom_indices = {
+     'a', 'b', 'c', 'd', 'e', 'f',
+     'g', 'h', 'i' , 'j', 'k', 'l',
+     'm', 'n', 'o', 'p', 'q', 'r' ,
+     's', 't', 'u', 'v', 'w', 'x',
+     'y', 'z'
  }
 
 
@@ -47,15 +47,13 @@ endfunction
 -- Startify header ---------------------------------------
 ----------------------------------------------------------
 vim.g.startify_custom_header = {
-[[       __   __   ______   ______   __   __ __   __    __          ]], 
+[[       __   __   ______   ______   __   __ __   __    __          ]],
 [[      /\ "-.\ \ /\  ___\ /\  __ \ /\ \ / //\ \ /\ "-./  \         ]],
 [[      \ \ \-.  \\ \  __\ \ \ \/\ \\ \ \'/ \ \ \\ \ \-./\ \        ]],
-[[       \ \_\\"\_\\ \_____\\ \_____\\ \__|  \ \_\\ \_\ \ \_\       ]], 
-[[        \/_/ \/_/ \/_____/ \/_____/ \/_/    \/_/ \/_/  \/_/       ]],                                                            
-[[                              _   _                               ]],               
-[[        Alex Simões          (_)-(_)                              ]],  
-[[        github.com/lxlx19     (o o)                               ]],
-[[      --------------------ooO--(_)--Ooo--------------------       ]],                                            
+[[       \ \_\\"\_\\ \_____\\ \_____\\ \__|  \ \_\\ \_\ \ \_\       ]],
+[[        \/_/ \/_/ \/_____/ \/_____/ \/_/    \/_/ \/_/  \/_/       ]],
+[[        Alex Simões                                               ]],
+[[        github.com/lxlx19                                         ]],
 }
 
 ----------------------------------------------------------
@@ -72,4 +70,4 @@ vim.g.startify_lists = {
 ------------------------------------------------------------
 --  Startify session sort method -------------------------
 ----------------------------------------------------------
-vim.g.startify_session_sort = 1 
+vim.g.startify_session_sort = 1

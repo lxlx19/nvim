@@ -46,10 +46,10 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- telescope themes
 vim.keymap.set('n', '<leader>ft', function()
-  builtin.colorscheme({
-    enable_preview = true,
-    theme_dropdown = true,
-  })
+    builtin.colorscheme({
+        enable_preview = true,
+        theme_dropdown = true,
+    })
 end, {})
 
 --------------------------------------------------------------
@@ -65,15 +65,15 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = true,
     }),
   },
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
-    { name = 'buffer' },
-  },
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'vsnip' },
+        { name = 'buffer' },
+    },
 })
 
 --------------------------------------------------------------

@@ -10,7 +10,6 @@ vim.g.ale_lint_on_filetype_changed = 0
 vim.g.ale_lint_on_text_changed = 'never'
 vim.g.ale_disable_lsp = 1
 
-
 -- Configurar linters ---------------------------------------
 vim.g.ale_linters = {
     python = {'flake8', 'pyright', 'bandit', 'trim_whitespace'},
