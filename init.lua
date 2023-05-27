@@ -5,25 +5,24 @@
 ---------------------------------------------------------
 -- Packer Config ----------------------------------------
 ---------------------------------------------------------
-require('packer-import')
+require('plugins')
 vim.cmd([[packadd packer.nvim]])
+vim.cmd([[packadd nvim-web-devicons]])
 
 ---------------------------------------------------------
 -- Configs import ---------------------------------------
 ---------------------------------------------------------
-require('ale-config')
-require('feline-config')
-require('general-config')
-require('lspconfig-config')
-require('keybinds-config')
-require('notify-config')
-require('nvimtree-config')
-require('mason-config')
-require('startify-config')
-require('themes-config')
-require('toggleterm-config')
-require('transparent-config')
-require('treesitter-config')
-require('whichkey-config')
-
-
+require('config/ale')
+require('config/general')
+require('config/keybinds')
+require('config/lspconfig')
+require('config/lualine')
+require('config/mason')
+require('config/notify')
+require('config/nvimtree')
+require('config/startify')
+require('config/themes')
+require('config/toggleterm')
+require('config/transparent')
+require('config/treesitter')
+require('config/whichkey')

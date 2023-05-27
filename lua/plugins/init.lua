@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   use {
       'williamboman/mason.nvim',
   }
-    
+ 
 --- DAP ------------------------------------------------------
   use 'mfussenegger/nvim-dap'
 
@@ -52,7 +52,14 @@ return require('packer').startup(function(use)
 
 --- Feline ---------------------------------------------------
   use 'freddiehaddad/feline.nvim'
-    
+
+--- Lualine --------------------------------------------------
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = {'nvim-tree/nvim-web-devicons', opt = true}
+  }
+
+
 --- Devicons -------------------------------------------------
   use 'kyazdani42/nvim-web-devicons'
 
@@ -142,7 +149,7 @@ return require('packer').startup(function(use)
 }
 
 --- Gruvbox --------------------------------------------------
-  use 'sainnhe/gruvbox-material'
+    use { "ellisonleao/gruvbox.nvim" }    
 
 --- Edge -----------------------------------------------------
   use 'sainnhe/edge'
