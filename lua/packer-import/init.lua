@@ -162,6 +162,15 @@ return require('packer').startup(function(use)
 --- tokyonight.nvim ------------------------------------------
   use 'folke/tokyonight.nvim'
 
+--- Bluloco --------------------------------------------------
+  use {
+      'uloco/bluloco.nvim',
+      requires = {
+          'rktjmp/lush.nvim'
+      }
+  }
+
+
 end)
 
 
