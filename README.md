@@ -5,13 +5,13 @@
 **[<kbd> <br> node <br> </kbd>][node]** 
 **[<kbd> <br> npm <br> </kbd>][npm]** 
 **[<kbd> <br> cargo <br> </kbd>][cargo]**
-**[<kbd> <br> ripgrep <br> </kbd>}][ripgrep]**
+**[<kbd> <br> ripgrep <br> </kbd>][ripgrep]**
 
 
 [python]: https://www.python.org/
 [node]: https://nodejs.org/en
 [npm]: https://www.npmjs.com/
-[cargo: https://github.com/rust-lang/cargo
+[cargo]: https://github.com/rust-lang/cargo
 [ripgrep]: https://github.com/BurntSushi/ripgrep
 
 ## Installation 
