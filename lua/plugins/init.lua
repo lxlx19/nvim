@@ -34,7 +34,15 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
 
 --- Git-Gutter -----------------------------------------------
-    use 'airblade/vim-gitgutter'
+ --   use 'airblade/vim-gitgutter'
+
+--- Gitsigns -------------------------------------------------
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
 
 --- Nvim-Visual-Multi ----------------------------------------
     use 'mg979/vim-visual-multi'
@@ -79,17 +87,8 @@ return require('packer').startup(function(use)
 
 --- Toggle Terminal ------------------------------------------
     use 'akinsho/nvim-toggleterm.lua'
-  
---- Alpha-nvim -----------------------------------------------
---  use {
---    'goolord/alpha-nvim',
---    requires = { 'nvim-tree/nvim-web-devicons' },
---    config = function ()
---        require'alpha'.setup(require'alpha.themes.startify'.config)
---    end
---}
 
---- Startify -------------------------------------------------
+    --- Startify -------------------------------------------------
     use 'mhinz/vim-startify'
 
 --- Barbar ---------------------------------------------------
