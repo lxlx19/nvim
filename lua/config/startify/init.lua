@@ -2,13 +2,19 @@
 -- STARTIFY CONFIG ---------------------------------------
 ----------------------------------------------------------
 
--- Instalação do nvim-web-devicons
+----------------------------------------------------------
+-- Instalação do nvim-web-devicons -----------------------
+----------------------------------------------------------
 vim.cmd [[packadd nvim-web-devicons]]
-
+----------------------------------------------------------
+-- Startify settings -------------------------------------
+----------------------------------------------------------
 vim.g.startify_enable_special = 0
  vim.g.startify_files_number = 6
  vim.g.startify_change_to_dir = 1
- -- forçar que os atalhos sejam letras e não numeros
+----------------------------------------------------------
+-- Startify shortcuts ------------------------------------
+----------------------------------------------------------
  vim.g.startify_custom_indices = {
      'a', 'b', 'c', 'd', 'e', 'f',
      'g', 'h', 'i' , 'j', 'k', 'l',
@@ -16,8 +22,9 @@ vim.g.startify_enable_special = 0
      's', 't', 'u', 'v', 'w', 'x',
      'y', 'z'
  }
-
-
+----------------------------------------------------------
+-- Startify commands -------------------------------------
+----------------------------------------------------------
  vim.g.startify_commands = {
      { '  New File', 'enew' },
      { '  Packer Sync', 'PackerSync' },
@@ -27,8 +34,9 @@ vim.g.startify_enable_special = 0
      { '  Settings', 'edit ~/.config/nvim/init.lua'},
      { '  Quit', 'qa!'},
  }
-
-
+----------------------------------------------------------
+-- Functions ---------------------------------------------
+----------------------------------------------------------
  function _G.webDevIcons(path)
     local filename = vim.fn.fnamemodify(path, ":t")
     local extension = vim.fn.fnamemodify(path, ":e")
@@ -55,7 +63,6 @@ vim.g.startify_custom_header = {
 [[        Alex Simões                                               ]],
 [[        github.com/lxlx19                                         ]],
 }
-
 ----------------------------------------------------------
 -- Startify lists ----------------------------------------
 ----------------------------------------------------------

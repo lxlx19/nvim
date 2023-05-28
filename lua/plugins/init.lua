@@ -3,6 +3,29 @@
 --------------------------------------------------------------
 
 --------------------------------------------------------------
+-- Bootstrap Packer if it doesn't exist ----------------------
+--------------------------------------------------------------
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({
+            'git',
+            'clone',
+            '--depth',
+            '1',
+            'https://github.com/wbthomason/packer.nvim',
+            install_path
+        })
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
+--------------------------------------------------------------
 -- Packer ----------------------------------------------------
 --------------------------------------------------------------
 return require('packer').startup(function(use)
@@ -34,7 +57,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
 
 --- Git-Gutter -----------------------------------------------
- --   use 'airblade/vim-gitgutter'
+   use 'airblade/vim-gitgutter'
 
 --- Gitsigns -------------------------------------------------
     use {
@@ -53,7 +76,7 @@ return require('packer').startup(function(use)
 --- Telescope with FZF ---------------------------------------
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { 
+        requires = {
             {'nvim-lua/popup.nvim'},
             {'nvim-lua/plenary.nvim'}
         }
@@ -92,7 +115,6 @@ return require('packer').startup(function(use)
     use 'mhinz/vim-startify'
 
 --- Barbar ---------------------------------------------------
-    use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
 
 --- Vim wiki -------------------------------------------------
@@ -161,7 +183,7 @@ return require('packer').startup(function(use)
     }
 
 --- Gruvbox --------------------------------------------------
-    use { "ellisonleao/gruvbox.nvim" }    
+    use { "ellisonleao/gruvbox.nvim" }
 
 --- Edge -----------------------------------------------------
     use 'sainnhe/edge'
@@ -189,6 +211,10 @@ return require('packer').startup(function(use)
         }
     }
 
+--- Packer sync ----------------------------------------------
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 
 end)
 

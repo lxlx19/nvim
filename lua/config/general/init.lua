@@ -3,13 +3,15 @@
 ---------------------------------------------------------
 vim.cmd('syntax enable') -- Enables syntax highlighing
 vim.cmd('filetype plugin indent on') -- Enables filetype detection, plugins and indenting
-
+---------------------------------------------------------
 -- Encoding ---------------------------------------------
+---------------------------------------------------------
 vim.o.encoding = 'utf-8' -- The encoding displayed
 vim.o.fileencoding = 'utf-8' -- The encoding written to file
 vim.scriptencoding = 'utf-8' -- The encoding used internally
-
-
+---------------------------------------------------------
+-- UI ---------------------------------------------------
+---------------------------------------------------------
 vim.o.title = true -- Set the title of window to the value of the titlestring
 vim.o.expandtab = true -- Use spaces instead of tabs
 vim.o.hlsearch = true -- Highlight search results
@@ -37,7 +39,7 @@ vim.o.softtabstop = 4 -- Number of spaces tabs count for
 vim.o.expandtab = true -- Use spaces instead of tabs
 vim.o.showtabline = 2 -- Always show tabs
 vim.o.number = true -- Show line numbers
---vim.o.relativenumber = true -- Relative line numbers
+vim.o.relativenumber = true -- Relative line numbers
 vim.o.cursorline = true -- Highlight cursor line
 vim.o.signcolumn = 'yes' -- Always show the sign column, otherwise it would shift the text each time
 vim.o.updatetime = 300 -- Faster completion

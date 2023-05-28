@@ -11,5 +11,5 @@ require("transparent").setup({
     extra_groups = {
         'NvimTreeNormal', 'NvimTreeEndOfBuffer', 'NvimTreeVertSplit',
     },
-    exclude_groups = {}, 
+    exclude_groups = {},
 })

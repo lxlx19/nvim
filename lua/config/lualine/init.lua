@@ -1,37 +1,30 @@
 --------------------------------------------------------
 -- LUALINE ---------------------------------------------
 --------------------------------------------------------
+
+--------------------------------------------------------
+-- Current buffer number -------------------------------
+--------------------------------------------------------
 local function current_buffer_number()
     return "﬘ " .. vim.api.nvim_get_current_buf()
 end
-
-local function diff_source()
-    local branch_sign = ''
-    local git_info = vim.b.gitsigns_status_dict
-    if not git_info or git_info.head == '' then
-        return ''
-    end
-    local added = git_info.added and ('+' .. git_info.added .. ' ') or ''
-    local modified = git_info.changed and ('~' .. git_info.changed .. ' ') or ''
-    local removed = git_info.removed and ('-' .. git_info.removed .. ' ') or ''
-    local pad = ((added ~= '') or (removed ~= '') or (modified ~= '')) and ' ' or ''
-    local diff_str = string.format('%s%s%s%s', added, removed, modified, pad)
-     return string.format('%s%s %s ', diff_str, branch_sign, git_info.head)
-end
-
-
+--------------------------------------------------------
+-- Current date ----------------------------------------
+--------------------------------------------------------
 local function current_date()
     local date = os.date("%d.%m.%y %H:%M")
     return date
     end
-
-
+--------------------------------------------------------
+-- Treesitter status -----------------------------------
+--------------------------------------------------------
 local function treesitter_status()
   local parsers = vim.tbl_keys(vim.treesitter.status())
   return table.concat(parsers, ", ")
 end
-
-
+--------------------------------------------------------
+-- LSP status ------------------------------------------
+--------------------------------------------------------
 local function lsp_status()
   local connected_clients = vim.lsp.get_active_clients()
   if #connected_clients > 0 then
@@ -43,9 +36,10 @@ local function lsp_status()
   end
   return ""
 end
-
-
-local custom_auto = require "lualine.themes.auto"
+--------------------------------------------------------
+-- Custom theme ----------------------------------------
+--------------------------------------------------------
+local custom_auto = require ("lualine.themes.auto")
 --custom_auto.terminal.a.bg = "#1e90ff"
 custom_auto.normal.a.bg = "#131313"
 custom_auto.normal.a.fg = "#6d7275"
@@ -59,6 +53,9 @@ custom_auto.replace.a.bg = "#C83434"
 custom_auto.visual.a.bg = "#725191"
 custom_auto.visual.b.fg = "#1e90ff"
 
+--------------------------------------------------------
+-- Lualine setup ---------------------------------------
+--------------------------------------------------------
 require("lualine").setup {
   options = {
     icons_enabled = true,
@@ -72,9 +69,18 @@ require("lualine").setup {
   sections = {
     lualine_a = {{ "mode", icon_enabled = true, icon = { "", color = { fg = "#1e90ff" } } } },
     lualine_b = {
-      { "b:gitsigns_head", color = { fg = "#4aa6ff" }, icon = { "", color = { fg = "#f2891c" } } },
-      { "diff", source = diff_source() },
-          },
+            { "branch", color = { fg = "4aa6ff"}, icon = { "", color = { fg = "#f2891c" } } },
+            { "diff",
+                color_added = "#51A266",
+                color_modified = "#f2891c",
+                color_removed = "#C83434",
+                symbols = {
+                    added = " ",
+                    modified = " ",
+                    removed = " "
+                }
+            },
+        },
     lualine_c = {
         { current_buffer_number, color = { fg = "#A9A9A9" } },
         { "filename", path = 4, symbols = { modified = " ", readonly = " " } },
