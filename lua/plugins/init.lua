@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
     use {
         'williamboman/mason.nvim',
     }
- 
+
 --- DAP ------------------------------------------------------
     use 'mfussenegger/nvim-dap'
 
@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         requires = { 
             {'nvim-lua/popup.nvim'},
-            {'nvim-lua/plenary.nvim'} 
+            {'nvim-lua/plenary.nvim'}
         }
     }
     use 'nvim-telescope/telescope-fzf-native.nvim'
@@ -120,6 +120,8 @@ return require('packer').startup(function(use)
 --- ALE ------------------------------------------------------
     use 'dense-analysis/ale'
 
+--- Smart Column ---------------------------------------------
+    use "m4xshen/smartcolumn.nvim"
 
 --- Nvim-Autopairs -------------------------------------------
     use {
