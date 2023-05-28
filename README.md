@@ -1,5 +1,19 @@
 # My Personal Configuration for Neovim
 
+## Requirements
+**[<kbd> <br> python <br> </kbd>][python]** 
+**[<kbd> <br> node <br> </kbd>][node]** 
+**[<kbd> <br> npm <br> </kbd>][npm]** 
+**[<kbd> <br> cargo <br> </kbd>][cargo]**
+**[<kbd> <br> ripgrep <br> </kbd>}][ripgrep]**
+
+
+[python]: https://www.python.org/
+[node]: https://nodejs.org/en
+[npm]: https://www.npmjs.com/
+[cargo: https://github.com/rust-lang/cargo
+[ripgrep]: https://github.com/BurntSushi/ripgrep
+
 ## Installation 
 
 ### Install Neovim in Manjaro (my favorite distro)
@@ -8,17 +22,10 @@
 sudo pacman -Sy neovim 
 ```
 
-### Install Packer
-> Unix
-```shell
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
 ### Install Configuration 
 > Unix
 ```shell
-https://github.com/lxlx19/nvim.git ~/.config/nvim 
+git clone https://github.com/lxlx19/nvim.git ~/.config/nvim 
 ```
 
 ### Remove the git file
@@ -29,7 +36,7 @@ rm -rf ~/config/nvim/.git
 
 ### Start Neovim and Install Plugins
 > Unix
-```shell
+```shell```
 nvim 
 :PackerSync
 ```
