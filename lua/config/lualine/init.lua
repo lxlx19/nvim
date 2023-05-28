@@ -1,29 +1,29 @@
 --------------------------------------------------------
--- LUALINE ---------------------------------------------
+-----------------------( LUALINE )----------------------
 --------------------------------------------------------
 
 --------------------------------------------------------
--- Current buffer number -------------------------------
+---< Current buffer number >----------------------------
 --------------------------------------------------------
 local function current_buffer_number()
     return "﬘ " .. vim.api.nvim_get_current_buf()
 end
 --------------------------------------------------------
--- Current date ----------------------------------------
+---< Current date >-------------------------------------
 --------------------------------------------------------
 local function current_date()
     local date = os.date("%d.%m.%y %H:%M")
     return date
     end
 --------------------------------------------------------
--- Treesitter status -----------------------------------
+---< Treesitter status >--------------------------------
 --------------------------------------------------------
 local function treesitter_status()
   local parsers = vim.tbl_keys(vim.treesitter.status())
   return table.concat(parsers, ", ")
 end
 --------------------------------------------------------
--- LSP status ------------------------------------------
+---< LSP status >---------------------------------------
 --------------------------------------------------------
 local function lsp_status()
   local connected_clients = vim.lsp.get_active_clients()
@@ -37,7 +37,7 @@ local function lsp_status()
   return ""
 end
 --------------------------------------------------------
--- Custom theme ----------------------------------------
+---< Custom theme >-------------------------------------
 --------------------------------------------------------
 local custom_auto = require ("lualine.themes.auto")
 --custom_auto.terminal.a.bg = "#1e90ff"
@@ -54,7 +54,7 @@ custom_auto.visual.a.bg = "#725191"
 custom_auto.visual.b.fg = "#1e90ff"
 
 --------------------------------------------------------
--- Lualine setup ---------------------------------------
+---< Lualine setup >------------------------------------
 --------------------------------------------------------
 require("lualine").setup {
   options = {
@@ -83,7 +83,7 @@ require("lualine").setup {
         },
     lualine_c = {
         { current_buffer_number, color = { fg = "#A9A9A9" } },
-        { "filename", path = 4, symbols = { modified = " ", readonly = " " } },
+        { "filename", path = 1, symbols = { modified = " ", readonly = " " } },
         { treesitter_status, color = { fg = "#51A266" }, icon = { "", color = { fg = "#51A266" } } },
         { lsp_status, color = { fg = "#51A266" } , icon = { "", color = { fg = "#51A266" } } },
         { "diagnostics", sources = { "nvim_diagnostic" } },

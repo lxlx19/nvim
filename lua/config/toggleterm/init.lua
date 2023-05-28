@@ -1,5 +1,5 @@
 ---------------------------------------------------------
--- TOGGLETERM CONFIG ------------------------------------
+-------------------( TOGGLETERM CONFIG )-----------------
 ---------------------------------------------------------
 require('toggleterm').setup{
     open_mapping = [[<F7>]],  -- Define o atalho para abrir o terminal usando F7

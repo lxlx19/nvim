@@ -1,16 +1,16 @@
 ---------------------------------------------------------
--- GENERAL CONFIG ---------------------------------------
+----------------( GENERAL CONFIG )-----------------------
 ---------------------------------------------------------
 vim.cmd('syntax enable') -- Enables syntax highlighing
 vim.cmd('filetype plugin indent on') -- Enables filetype detection, plugins and indenting
 ---------------------------------------------------------
--- Encoding ---------------------------------------------
+---< Encoding >------------------------------------------
 ---------------------------------------------------------
 vim.o.encoding = 'utf-8' -- The encoding displayed
 vim.o.fileencoding = 'utf-8' -- The encoding written to file
 vim.scriptencoding = 'utf-8' -- The encoding used internally
 ---------------------------------------------------------
--- UI ---------------------------------------------------
+---< UI >------------------------------------------------
 ---------------------------------------------------------
 vim.o.title = true -- Set the title of window to the value of the titlestring
 vim.o.expandtab = true -- Use spaces instead of tabs

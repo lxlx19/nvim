@@ -7,7 +7,6 @@
 **[<kbd> <br> cargo <br> </kbd>][cargo]**
 **[<kbd> <br> ripgrep <br> </kbd>][ripgrep]**
 
-
 [python]: https://www.python.org/
 [node]: https://nodejs.org/en
 [npm]: https://www.npmjs.com/
