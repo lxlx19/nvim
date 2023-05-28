@@ -36,7 +36,7 @@ rm -rf ~/config/nvim/.git
 
 ### Start Neovim and Install Plugins
 > Unix
-```shell```
+```shell
 nvim 
 :PackerSync
 ```
