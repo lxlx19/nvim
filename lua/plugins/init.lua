@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
 ---< LSP >------------------------------------------------------
     use 'neovim/nvim-lspconfig'
 
+---< HOP >------------------------------------------------------
+    use 'phaazon/hop.nvim'
+
 ---< Github Copilot >-------------------------------------------
     use 'github/copilot.vim'
 
