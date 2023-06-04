@@ -17,41 +17,40 @@ vim.cmd([[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]])
 ---< Opt >-------------------------------------------
 -----------------------------------------------------
 vim.opt.list = true
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
+vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("eol:↴")
 -----------------------------------------------------
 ---< Plugin setup >----------------------------------
 -----------------------------------------------------
 return {
-  "lukas-reineke/indent-blankline.nvim",
-  event = { "BufReadPost", "BufNewFile" },
-  opts = {
-    space_char_blankline = " ",
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
-    },
-    char = "│",
-    filetype_exclude = {
-      "help",
-      "alpha",
-      "dashboard",
-      "neo-tree",
-      "Trouble",
-      "lazy",
-      "mason",
-      "notify",
-      "toggleterm",
-      "lazyterm",
-    },
-    show_trailing_blankline_indent = false,
-    show_current_context = false,
-        -- ignore start page
-    buftype_exclude = {"terminal", "nofile"},
-    filetype_exclude = {"startify", "dashboard", "alpha" },
-  },
+	"lukas-reineke/indent-blankline.nvim",
+	event = { "BufReadPost", "BufNewFile" },
+	opts = {
+		space_char_blankline = " ",
+		char_highlight_list = {
+			"IndentBlanklineIndent1",
+			"IndentBlanklineIndent2",
+			"IndentBlanklineIndent3",
+			"IndentBlanklineIndent4",
+			"IndentBlanklineIndent5",
+			"IndentBlanklineIndent6",
+		},
+		char = "│",
+		filetype_exclude = {
+			"help",
+			"alpha",
+			"dashboard",
+			"neo-tree",
+			"Trouble",
+			"lazy",
+			"mason",
+			"notify",
+			"toggleterm",
+			"lazyterm",
+		},
+		show_trailing_blankline_indent = false,
+		show_current_context = false,
+		-- ignore start page
+		buftype_exclude = { "terminal", "nofile" },
+	},
 }

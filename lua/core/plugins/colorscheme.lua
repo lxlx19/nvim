@@ -1,16 +1,14 @@
 return {
- {
-	"ellisonleao/gruvbox.nvim", 
-	lazy = true,
-	priority = 1000
-},
+	{
+		"ellisonleao/gruvbox.nvim",
+		lazy = true,
+		priority = 1000,
+	},
 
-{
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {},
-},
-
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 }
-
