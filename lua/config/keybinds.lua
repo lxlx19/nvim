@@ -8,14 +8,6 @@
 vim.g.mapleader = ' '
 
 --------------------------------------------------------------
----< COPY AND PASTE >-----------------------------------------
---------------------------------------------------------------
-vim.api.nvim_set_keymap('n', '<leader>c', '"+y', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
-vim.api.nvim_set_keymap('v', '<leader>c', '"+y', { noremap = true })
-vim.api.nvim_set_keymap('v', '<leader>p', '"+p', { noremap = true })
-
---------------------------------------------------------------
 ---< SAVE AND QUIT >------------------------------------------
 --------------------------------------------------------------
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true })
