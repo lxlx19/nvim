@@ -17,13 +17,14 @@ return {
 	"nvim-lualine/lualine.nvim",
 	event = "VeryLazy",
 	opts = function()
+		local Util = require("config.util")
 		return {
 			options = {
 				icons_enabled = true,
-				theme = "gruvbox",
+				theme = "auto",
 				component_separators = { left = " ", right = " " },
 				section_separators = { left = " ", right = " " },
-				disabled_filetypes = {},
+				disabled_filetypes = { statusline = { "alpha" } },
 				always_divide_middle = false,
 				globalstatus = true,
 			},
@@ -44,11 +45,13 @@ return {
 					},
 				},
 				lualine_c = {
-					{ "filename", path = 1, symbols = { modified = " ", readonly = " " } },
+					{ "diagnostics", sources = { "nvim_diagnostic" } },
 					{ lsp_status, color = { fg = "#51A266" }, icon = { "", color = { fg = "#51A266" } } },
+					{ "lsp_progress", color = { fg = "#51A266" } },
 				},
 				lualine_x = {
 					{ "filetype", icon_only = true },
+					{ "filename", path = 1, symbols = { modified = " ", readonly = " " } },
 					{ "encoding", icon_only = true },
 					{ "fileformat", icon_only = true, color = { fg = "#A9A9A9" } },
 				},
