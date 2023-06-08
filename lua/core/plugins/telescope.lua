@@ -18,6 +18,8 @@ return {
 		-- git
 		{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
 		{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
+		-- fzf
+		{ "<leader>gz", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "fzf" },
 		-- search
 		{ "<leader>sa", "<cmd>Telescope autocommands<cr>", desc = "Auto Commands" },
 		{ "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
