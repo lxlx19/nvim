@@ -2,15 +2,22 @@ return {
 	{
 		"williamboman/mason.nvim",
 		cmd = "Mason",
+		dependencies = {
+			"williamboman/nvim-lsp-installer",
+			"williamboman/mason-lspconfig.nvim",
+		},
 		keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
 		opts = {
 			ensure_installed = {
 				"stylua",
 				"shfmt",
-				"flake8",
-				"black",
+				"blue",
+				"pylama",
+				"pylyzer",
 				"pyright",
-				"pylint",
+				"python-lsp-server",
+				"ruff",
+				"ruff-lsp",
 			},
 		},
 		---@param opts MasonSettings | {ensure_installed: string[]}

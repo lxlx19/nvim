@@ -5,10 +5,10 @@ return {
 		ft = "markdown",
 		opts = {
 			toggler = {
-				block = "g//",
+				block = "g;;",
 			},
 			opleader = {
-				block = "g/",
+				block = "g;",
 			},
 		},
 	},
